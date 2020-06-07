@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Usuarios nuevos</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>PRIMER_NOMBRE</th>
+                        <th>SEGUNDO_NOMBRE</th>
+                        <th>CORREO</th>
+                        <th>FECHA_Y_TIEMPO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of dataListSubject|async">
+                        
+                            <td>{{ data.Nombre}}</td>
+                            <td>{{ data.Apellido}}</td>
+                            <td>{{ data.Correo}}</td>
+                            <td>{{data.tiempo}}</td>
+                         <td>
+                            <button class="btn bt-warning">Eliminar</button>
+                        </td>  
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
